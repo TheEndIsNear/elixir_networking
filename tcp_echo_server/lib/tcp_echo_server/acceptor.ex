@@ -17,7 +17,8 @@ defmodule TCPEchoServer.Acceptor do
       active: :once,
       exit_on_close: false,
       reuseaddr: true,
-      backlog: 25
+      backlog: 25,
+      packet: :line
     ]
 
     case :gen_tcp.listen(port, listen_options) do
